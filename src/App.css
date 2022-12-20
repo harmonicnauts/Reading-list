@@ -46,6 +46,17 @@
   margin: 30px 0;
 }
 
+.collapsible{
+  display: flex;
+  width:40vh;
+  color: #fff;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 10px;
+  max-height: 30px;
+}
+
 .book-input{
   outline: none;
   width: 260px;
