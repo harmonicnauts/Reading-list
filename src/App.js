@@ -29,14 +29,19 @@ function App() {
             <Form
               input={input}
               setInput={setInput}
-              authorinput = {authorInput}
+
+              authorInput = {authorInput}
               setAuthorInput = {setAuthorInput}
-              publisherinput = {publisherinput}
-              setPublisherInput= {setPublisherInput}
-              summaryInput= {summaryInput}
-              setSummaryInput= {setSummaryInput}
+
+              publisherInput = {publisherinput}
+              setPublisherInput = {setPublisherInput}
+
+              summaryInput = {summaryInput}
+              setSummaryInput = {setSummaryInput}
+
               books={books}
               setBooks={setBooks}
+
               editBook={editBook}
               setEditBook={setEditBook}
             />

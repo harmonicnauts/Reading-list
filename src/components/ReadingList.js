@@ -1,10 +1,12 @@
 import React from 'react'
-import Collapsible from 'react-collapsible';
+// import Collapsible from 'react-collapsible';
 
 
 const ReadingList = ({ books, setBooks, setEditBook }) => {
   const handleDelete = ({ id }) => {
     setBooks(books.filter((book) => book.id !== id));
+    // console.log(JSON.stringify(books));
+    // console.log(JSON.stringify());
   }
   const handleComplete = (book) => {
     setBooks(
@@ -25,6 +27,7 @@ const ReadingList = ({ books, setBooks, setEditBook }) => {
     <div>
       {books.map((book) => (
         <li className='list-item' key={book.id}>
+          {/* <div>{JSON.stringify(books)}</div> */}
           <div><input type='text' value={book.title} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>
           <div><input type='text' value={book.author} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>
           <div><input type='text' value={book.publisher} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>

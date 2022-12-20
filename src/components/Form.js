@@ -18,6 +18,9 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 	useEffect(() => {
 		if (editBook) {
 			setInput(editBook.title);
+			setInput(editBook.author);
+			setInput(editBook.publisher);
+			setInput(editBook.summary);
 		} else {
 			setInput('');
 		}
@@ -37,29 +40,34 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 		if (!editBook) {
 			setBooks([...books, { id: uuidv4(), title: input, author: authorInput, publisher: publisherInput, summary: summaryInput ,completed: false }]);
 			setInput("");
-			setAuthorInput('');
-			setPublisherInput('');
+      // console.log('1');
+			setAuthorInput("");
+      // console.log('2');
+			setPublisherInput("");
+      // console.log('3');
 			setSummaryInput("");
+      // console.log('4');
 		}
 		else {
-			updateBook(input, editBook.author, editBook.publisher, editBook.summary, editBook.id, editBook.completed)
+			updateBook(editBook.id, input, editBook.author, editBook.publisher, editBook.summary, editBook.completed)
 		}
 
 	};
 	return (
 		<form onSubmit={onFormSubmit}>
 			<div>
-				<input type='text' placeholder="Enter a book name..." className='book-input' value={input} required onChange={onNameInputChange} />
+				<input type='text' placeholder="Enter the book's name..." className='book-input' value={input} required onChange={onNameInputChange} />
 			</div>
 			<div>
-				<input type='text' placeholder="Enter the book's author..." className='book-input' value={authorInput} required onChange={onAuthorInputChange} />
+				<input type='text' placeholder="Enter the book's author..." className='book-input' value={authorInput} onChange={onAuthorInputChange} />
 			</div>
 			<div>
-				<input type='text' placeholder="Enter the book's publisher..." className='book-input' value={publisherInput} required onChange={onPublisherInputChange} />
+				<input type='text' placeholder="Enter the book's publisher..." className='book-input' value={publisherInput} onChange={onPublisherInputChange} />
 			</div>
       <div>
-				<input type='text' placeholder="Enter the book's Summary..." className='book-input' value={summaryInput} required onChange={onSummaryInputChange} />
+				<input type='text' placeholder="Enter the book's Summary..." className='book-input' value={summaryInput} onChange={onSummaryInputChange} />
 			</div>
+      {console.log(JSON.stringify(books))}
 
 			<button className='button-add' type='submit'>
 				{editBook ? 'OK' : 'Add'}
