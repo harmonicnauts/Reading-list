@@ -36,7 +36,18 @@ const Form = ({ input, setInput, books, setBooks, editBook, setEditBook}) => {
     };
     return (
         <form onSubmit={onFormSubmit}>
-            <input type='text' placeholder='Enter a book name...' className='task-input' value={input} required onChange={onInputChange} />
+        <div>
+            <input type='text' placeholder="Enter a book name..." className='book-input' value={input} required onChange={onInputChange} />
+        </div>
+        <div>
+            <input type='text' placeholder="Enter the book's author..." className='book-input' value={input} required onChange={onInputChange} />
+        </div>
+        <div>
+            <input type='text' placeholder="Enter the book's publisher..." className='book-input' value={input} required onChange={onInputChange} />
+        </div>
+        <div>
+            <input type='text' placeholder="Enter the book's Summary..." className='book-input' value={input} required onChange={onInputChange} />
+        </div>
             <button className='button-add' type='submit'>
                 {editBook ? 'OK' : 'Add'}
             </button>

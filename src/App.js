@@ -15,32 +15,42 @@ function App() {
   }, [books])
 
   return (
-  <div className='container'>
-    <div className='app-wrapper'>
-      <div>
-        <Header/>
-      </div>
-      
-      <div>
-        <Form
-          input = {input}
-          setInput = {setInput}
-          books = {books}
-          setBooks = {setBooks}
-          editBook = {editBook}
-          setEditBook = {setEditBook}
-        />
-      </div>
+    <div>
+     <Header/>
+      <div className='container'>
+        <div className='app-wrapper'>
+          <div>
+            <div className='title'>
+              <h1>Book Form</h1>
+            </div>
+            <Form
+                input = {input}
+                setInput = {setInput}
+                books = {books}
+                setBooks = {setBooks}
+                editBook = {editBook}
+                setEditBook = {setEditBook}
+              />
+          </div>
+          
+        </div>
+        <div className='app-wrapper'>
+          <div>
+            <div className='title'>
+                <h1>Book List</h1>
+            </div>    
+          </div>
 
-      <div>
-        <ReadingList 
-        books = {books} 
-        setBooks={setBooks}
-        setEditBook = {setEditBook}
-        />
+          <div>
+            <ReadingList 
+            books = {books} 
+            setBooks={setBooks}
+            setEditBook = {setEditBook}
+            />
+          </div>
+        </div>
       </div>
     </div>
-  </div>
   );
 }
 
