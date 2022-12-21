@@ -65,10 +65,7 @@ function App() {
               setEditBook={setEditBook}
             />
           </div>
-          {/* <div>
-            <SimpleAccordion/>
-          </div> */}
-            
+
           </div>
         </div>
       </div>
