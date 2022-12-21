@@ -1,5 +1,11 @@
 import React from 'react'
-// import Collapsible from 'react-collapsible';
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+
+
 
 
 const ReadingList = ({ books, setBooks, setEditBook }) => {
@@ -26,36 +32,45 @@ const ReadingList = ({ books, setBooks, setEditBook }) => {
   return (
     <div>
       {books.map((book) => (
-        <li className='list-item' key={book.id}>
-          {/* <div>{JSON.stringify(books)}</div> */}
-          <div><input type='text' value={book.title} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>
-          <div><input type='text' value={book.author} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>
-          <div><input type='text' value={book.publisher} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>
-          <div><input type='text' value={book.summary} className={`list ${book.completed ? "complete" : ""}`} onChange={(event) => event.preventDefault()} /></div>
+        <div>
+          <Accordion>
+            <AccordionSummary
+              expandIcon={<ExpandMoreIcon />}
+              aria-controls="panel1a-content"
+              id="panel1a-header"
+            >
+              <Typography>{book.title}</Typography>
+
+            </AccordionSummary>
+            <AccordionDetails>
+              <Typography>
+                {book.author}
+              </Typography>
+
+              <Typography>
+                {book.publisher}
+              </Typography>
+
+              <Typography>
+                {book.summary}
+              </Typography>
+              <div className='button-group'>
+              <button className='button-complete task-button' onClick={() => handleComplete(book)}>
+                <i className='fa fa-check-circle'></i>
+              </button>
+              <button className='button-edit task-button' onClick={() => handleEdit(book)}>
+                <i className='fa fa-edit'></i>
+              </button>
+              <button className='button-delete task-button' onClick={() => handleDelete(book)}>
+                <i className='fa fa-trash'></i>
+              </button>
+            </div>
+            </AccordionDetails>
+
+          </Accordion>
           
-          <div>
-            <button className='button-complete task-button' onClick={() => handleComplete(book)}>
-              <i className='fa fa-check-circle'></i>
-            </button>
-            <button className='button-edit task-button' onClick={() => handleEdit(book)}>
-              <i className='fa fa-edit'></i>
-            </button>
-            <button className='button-delete task-button' onClick={() => handleDelete(book)}>
-              <i className='fa fa-trash'></i>
-            </button>
-          </div>
-          <br/>
-          {/* <Collapsible className='collapsible' trigger="Start here">
-              <p>
-                This is the collapsible content. It can be any element or React
-                component you like.
-              </p>
-              <p>
-                It can even be another Collapsible component. Check out the next
-                section!
-              </p>
-          </Collapsible> */}
-        </li>
+        </div>
+
       ))}
     </div>
   )

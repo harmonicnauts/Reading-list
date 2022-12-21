@@ -3,12 +3,14 @@ import './App.css';
 import Header from './components/Header';
 import Form from './components/Form';
 import ReadingList from './components/ReadingList';
+import Collapsible from './components/Collapsible';
+import SimpleAccordion from './components/Accordion';
 
 function App() {
   const initialState = JSON.parse(localStorage.getItem('books')) || [];
   const [input, setInput] = useState("");
   const [authorInput, setAuthorInput] = useState("");
-  const [publisherinput, setPublisherInput] = useState("");
+  const [publisherInput, setPublisherInput] = useState("");
   const [summaryInput, setSummaryInput] = useState("");
   const [books, setBooks] = useState(initialState);
   const [editBook, setEditBook] = useState(null);
@@ -33,7 +35,7 @@ function App() {
               authorInput = {authorInput}
               setAuthorInput = {setAuthorInput}
 
-              publisherInput = {publisherinput}
+              publisherInput = {publisherInput}
               setPublisherInput = {setPublisherInput}
 
               summaryInput = {summaryInput}
@@ -63,6 +65,9 @@ function App() {
               setEditBook={setEditBook}
             />
           </div>
+          {/* <div>
+            <SimpleAccordion/>
+          </div> */}
             
           </div>
         </div>

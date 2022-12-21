@@ -40,13 +40,10 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 		if (!editBook) {
 			setBooks([...books, { id: uuidv4(), title: input, author: authorInput, publisher: publisherInput, summary: summaryInput ,completed: false }]);
 			setInput("");
-      // console.log('1');
 			setAuthorInput("");
-      // console.log('2');
 			setPublisherInput("");
-      // console.log('3');
 			setSummaryInput("");
-      // console.log('4');
+
 		}
 		else {
 			updateBook(editBook.id, input, editBook.author, editBook.publisher, editBook.summary, editBook.completed)
@@ -65,9 +62,9 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 				<input type='text' placeholder="Enter the book's publisher..." className='book-input' value={publisherInput} onChange={onPublisherInputChange} />
 			</div>
       <div>
-				<input type='text' placeholder="Enter the book's Summary..." className='book-input' value={summaryInput} onChange={onSummaryInputChange} />
+				<input type='text' placeholder="Enter the book's Summary..." className='summary-input' value={summaryInput} onChange={onSummaryInputChange} />
 			</div>
-      {console.log(JSON.stringify(books))}
+			
 
 			<button className='button-add' type='submit'>
 				{editBook ? 'OK' : 'Add'}

@@ -19,7 +19,7 @@
 }
 
 .env{
-  background: linear-gradient(to right bottom, #e1b382, #c89666);
+  background: linear-gradient(to right top, #e1b382, #c89666);
   width: 100%;
   min-height: 10vh;
   display: flex;
@@ -60,6 +60,21 @@
 .book-input{
   outline: none;
   width: 260px;
+  padding: 15px;
+  margin-left: 15px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  font-size: 20px;
+  color: #ccc;
+  background-color: #000;
+  border: 1px solid #c89666;
+  border-radius: 10px;
+}
+
+.summary-input{
+  outline: none;
+  width: 260px;
+  height: 100px;
   padding: 15px;
   margin-left: 15px;
   margin-right: 25px;
@@ -113,6 +128,10 @@
 
 .button-delete{
   color: lightseagreen;
+}
+
+.button-group{
+  float: right;   
 }
 
 .complete{
