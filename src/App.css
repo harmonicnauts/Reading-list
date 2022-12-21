@@ -18,6 +18,7 @@
   margin: 20px
 }
 
+
 .env{
   background: linear-gradient(to right top, #e1b382, #c89666);
   width: 100%;
@@ -117,7 +118,7 @@
 }
 
 .button-complete{
-  color: #ff6c6c;
+  color: #2efd05;
   margin-right: 10px;
 }
 
@@ -131,14 +132,21 @@
 }
 
 .button-group{
-  float: right;   
+  float: right;
+  background-color: #dd8d42;
+  padding:10px;
+  border-radius: 5%;
+  -webkit-border-radius: 5%;
+  -moz-border-radius: 5%;
+  -ms-border-radius: 5%;
+  -o-border-radius: 5%;
 }
 
 .complete{
   text-decoration-style: solid;
   text-decoration-line: line-through;
   text-decoration-color: #ff6c6c;
-  opacity: 0.6;
+  opacity: 0.3;
 }
 
 .list{

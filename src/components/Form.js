@@ -18,19 +18,23 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 	useEffect(() => {
 		if (editBook) {
 			setInput(editBook.title);
-			setInput(editBook.author);
-			setInput(editBook.publisher);
-			setInput(editBook.summary);
+			setAuthorInput(editBook.author);
+			setPublisherInput(editBook.publisher);
+			setSummaryInput(editBook.summary);
 		} else {
 			setInput('');
-		}
-	}, [setInput, editBook])
+      setAuthorInput('');
+			setPublisherInput('');
+			setSummaryInput('');
+		} 
+	}, [setInput, setAuthorInput, setPublisherInput, setSummaryInput,editBook])
 
 
 	const updateBook = (title, id, author, publisher, summary , completed) => {
 		const newBook = books.map((book) =>
 			book.id === id ? { title, id, author, publisher, summary , completed } : book
 		);
+    console.log(newBook);
 		setBooks(newBook);
 		setEditBook('');
 	}
@@ -46,7 +50,7 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 
 		}
 		else {
-			updateBook(editBook.id, input, editBook.author, editBook.publisher, editBook.summary, editBook.completed)
+			updateBook(input, editBook.id, authorInput, publisherInput, summaryInput, editBook.completed)
 		}
 
 	};

@@ -3,8 +3,7 @@ import './App.css';
 import Header from './components/Header';
 import Form from './components/Form';
 import ReadingList from './components/ReadingList';
-import Collapsible from './components/Collapsible';
-import SimpleAccordion from './components/Accordion';
+
 
 function App() {
   const initialState = JSON.parse(localStorage.getItem('books')) || [];
