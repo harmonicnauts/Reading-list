@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -28,10 +30,23 @@
   align-items: center;
 }
 
+.boxed{
+  border: 1px solid  #12343b;
+  padding: 5px;
+  border-radius: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  -ms-border-radius: 9px;
+  -o-border-radius: 9px;
+}
+
 .app-wrapper{
   background-color: #12343b;
+  overflow:auto;
   min-width: 450px;
   min-height: 650px;
+  max-height: 900px;
+  max-width: 800px;
   padding: 30px;
   box-sizing: border-box;
   border-radius: 10px;
@@ -47,6 +62,16 @@
   margin: 30px 0;
 }
 
+.content-text{
+  color:#12343b;
+  font-family: 'Roboto', sans-serif;
+}
+
+.p-text{
+  font-size: larger;
+  font-family: 'Roboto', sans-serif;
+}
+
 .collapsible{
   display: flex;
   width:40vh;
@@ -60,7 +85,7 @@
 
 .book-input{
   outline: none;
-  width: 260px;
+  width: 33.5vh;
   padding: 15px;
   margin-left: 15px;
   margin-right: 25px;
@@ -73,8 +98,11 @@
 }
 
 .summary-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   outline: none;
-  width: 260px;
+  width: 33.5vh;
   height: 100px;
   padding: 15px;
   margin-left: 15px;
@@ -118,22 +146,22 @@
 }
 
 .button-complete{
-  color: #2efd05;
+  color: #12343b;
   margin-right: 10px;
 }
 
 .button-edit{
-  color: #e2d029;
+  color: #12343b;
   margin-right: 10px;
 }
 
 .button-delete{
-  color: lightseagreen;
+  color: #12343b;
 }
 
 .button-group{
   float: right;
-  background-color: #dd8d42;
+  background-color: #f1af71;
   padding:10px;
   border-radius: 5%;
   -webkit-border-radius: 5%;
