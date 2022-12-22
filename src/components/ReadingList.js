@@ -49,15 +49,15 @@ const ReadingList = ({ books, setBooks, setEditBook }) => {
               <h1 className='content-text'>{book.title}</h1>
 
               <Typography>
-                <strong className='content-text p-text'>Penulis</strong> : {book.author}
+                <strong className='content-text p-text'>Author</strong> : {book.author ? book.author : 'Unlisted'}
               </Typography>
 
               <Typography>
-                <strong className='content-text p-text'>Penerbit</strong> :  {book.publisher}
+                <strong className='content-text p-text'>Publisher</strong> :  {book.publisher ? book.publisher : 'Unlisted'}
               </Typography>
-                <h2 className='content-text p-text'>Sinopsis</h2>
+                <h2 className='content-text p-text'>Synopsis</h2>
                 <div className='boxed'>
-                  <div className='content-text p-text'>{book.summary}</div>
+                  <div className='content-text p-text'>{book.summary ? book.summary : 'Summary tidak tersedia.'}</div>
                 </div>
               <div className='button-group'>
                 <button className='button-complete task-button' onClick={() => handleComplete(book)}>
