@@ -44,7 +44,7 @@ Jalankan programnya
 
 
 
-## Authors
+## Anggota Kelompok
 
 - 50420616 / Jonathan Jordan / 3IA01
 - 51420022 / Rachmat / 3IA01
