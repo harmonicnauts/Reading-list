@@ -31,14 +31,14 @@ function App() {
               input={input}
               setInput={setInput}
 
-              authorInput = {authorInput}
-              setAuthorInput = {setAuthorInput}
+              authorInput={authorInput}
+              setAuthorInput={setAuthorInput}
 
-              publisherInput = {publisherInput}
-              setPublisherInput = {setPublisherInput}
+              publisherInput={publisherInput}
+              setPublisherInput={setPublisherInput}
 
-              summaryInput = {summaryInput}
-              setSummaryInput = {setSummaryInput}
+              summaryInput={summaryInput}
+              setSummaryInput={setSummaryInput}
 
               books={books}
               setBooks={setBooks}
@@ -57,17 +57,18 @@ function App() {
           </div>
 
           <div>
-          <div>
-            <ReadingList
-              books={books}
-              setBooks={setBooks}
-              setEditBook={setEditBook}
-            />
+            <div>
+              <ReadingList
+                books={books}
+                setBooks={setBooks}
+                setEditBook={setEditBook}
+              />
+            </div>
           </div>
 
-          </div>
         </div>
       </div>
+
     </div>
   );
 }

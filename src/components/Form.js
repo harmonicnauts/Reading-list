@@ -66,7 +66,7 @@ const Form = ({ input, setInput, authorInput, setAuthorInput, publisherInput, se
 				<input type='text' placeholder="Enter the book's publisher..." className='book-input' value={publisherInput} onChange={onPublisherInputChange} />
 			</div>
       <div>
-				<textarea type='text' placeholder="Enter the book's Summary..." className='summary-input' value={summaryInput} onChange={onSummaryInputChange} />
+				<textarea type='text' placeholder="Enter the book's Synopsis..." className='summary-input' value={summaryInput} onChange={onSummaryInputChange} />
 			</div>
 			
 
